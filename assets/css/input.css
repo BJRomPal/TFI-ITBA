@@ -1,0 +1,102 @@
+.campos-formulario-registro-inicioSesion {
+    margin-top: 10%;
+}
+
+.form__label {
+    font-size: 1.3em;
+    margin-bottom: 1rem;
+    font-family: Inter;
+    font-weight: bolder;
+    color: #083359
+  }
+  
+  .input-container {
+    font-weight: var(--font-weigth-input);
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+  }
+  
+  .input {
+    box-sizing: border-box;
+    border-bottom: 1px solid steelblue;
+    padding: 1.375rem 0.5rem 0.5rem;
+    height: 3.25rem;
+    width: 100%;
+    color: #083359;
+    font-weight: bold;
+  }
+  
+  .input::placeholder {
+    visibility: hidden;
+    color: #15186D;
+    font-family: Montserrat;
+    font-weight: lighter;
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .input-label {
+    position: absolute;
+    top: 1.375rem;
+    left: 0.5rem;
+    font-size: 1em;
+    transition: all 0.25s;
+    color: #083359;
+    font-family: Montserrat;
+    font-weight:800;
+  }
+  
+  .input:not(:placeholder-shown) + .input-label,
+  .input:focus + .input-label {
+    font-size: 0.875rem;
+    top: 0.25rem;
+    transition: all 0.25s;
+    color: #15186D;
+    font-weight: normal;
+  }
+  
+  .input-container--invalid {
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-container--invalid .input {
+    border: 1px solid #f24607;
+    border-radius: 7px;
+  }
+  
+  .input-container--invalid .input-label {
+    color: #f24607;
+  } 
+  
+  .input-message-error {
+    display: none;
+  }
+  
+  .input-container--invalid .input-message-error {
+    color: #f24607  ;
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .formulario-registro-inicioSesion--tienes-cuenta {
+    margin-top: 4rem;
+  }
+
+  .tienes-cuenta {
+    font-family: Montserrat;
+    color: #15186D;
+    font-size: 0.875rem;
+    font-weight: lighter;
+  }
+
+  .tienes-cuenta-inicia-sesion {
+    color: #0B2F8A;
+    font-weight: bold;
+  }

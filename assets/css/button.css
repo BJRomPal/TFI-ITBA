@@ -1,0 +1,17 @@
+.button {
+    background-color: #0B2F8A;
+    border-radius: 13px;
+    width: 100%;
+    margin-top: 1.1rem;
+    max-width: 13rem;
+    padding: 0.700rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: Montserrat;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .button:hover {
+    box-shadow: 0 7px 17px 0 #586482, 0 7px 30px 0 #475986;
+}

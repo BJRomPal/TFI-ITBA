@@ -1,0 +1,82 @@
+body {
+    background-color: lightgray;
+}
+
+.pantalla-registro-inicioSesion {
+    margin: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+
+.formulario-registro-inicioSesion {
+    height: calc(80vh - 4vw);
+    width: 48vw;
+    border-radius: 20px 0 0 20px;
+    background-color: white;
+    padding: 2vw;
+}
+
+.imagenYTexto-registro-signIn {
+    height: 80vh;
+    width: 50vw;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+}
+
+.texto-registro-signIn {
+    position: absolute;
+    top: 14vh;
+    left: 18vw;
+    font-family: Montserrat;
+    color: #f5f5f5;
+    font-size: 1.7em;
+    font-weight: bold;
+    width: 26vw;
+}
+
+.imagen-registro-signIn {
+    height: 80vh;
+    width: 50vw;
+    border-radius: inherit;
+    position: inherit;
+}
+
+@media screen and (min-width: 0px) and (max-width: 576px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .imagenYTexto-registro-signIn {
+        visibility: hidden;
+        width: 0%;
+    }
+
+    .formulario-registro-inicioSesion {
+        height: 70%;
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 577px) and ( max-width: 1200px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .imagenYTexto-registro-signIn {
+        visibility: hidden;
+        width: 0%;
+    }
+
+    .formulario-registro-inicioSesion {
+        height: 70%;
+        width: 100%;
+        margin-left: 6rem;
+        margin-right: 6rem;
+        border-radius: 20px;
+    }
+}
