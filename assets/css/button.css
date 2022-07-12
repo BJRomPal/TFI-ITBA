@@ -10,8 +10,15 @@
     font-family: Montserrat;
     font-size: 16px;
     text-align: center;
+    transition: 0.6s;
   }
 
-  .button:hover {
-    box-shadow: 0 7px 17px 0 #586482, 0 7px 30px 0 #475986;
+.button:hover {
+  background-color: #FFFFFF;
+  padding: 0.650rem;
+  color:#0B2F8A;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #0B2F8A;
+  border-width: thin;
 }

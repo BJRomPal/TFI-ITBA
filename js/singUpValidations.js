@@ -1,12 +1,18 @@
 export function valida(input) {
     const tipoDeInput = input.dataset.tipo;
-    if(input.validity.valid){
-        input.parentElement.classList.remove("input-container--invalid")
-        input.parentElement.querySelector(".input-message-error").innerHTML = "";
+    if(input.validity.valid && input.value.trim().length > 0){
+      input.parentElement.classList.remove("input-container--invalid")
+      input.parentElement.querySelector(".input-message-error").innerHTML = "";
     }else{
-        input.parentElement.classList.add("input-container--invalid")
-        input.parentElement.querySelector(".input-message-error").innerHTML = mostrarMensajeDeError(tipoDeInput, input);
-    };
+      if (input.value.trim().length == 0) {
+          input.parentElement.classList.add("input-container--invalid")
+          input.parentElement.querySelector(".input-message-error").innerHTML = "El campo no puede estar vacío";  
+      }
+      else { 
+      input.parentElement.classList.add("input-container--invalid")
+      input.parentElement.querySelector(".input-message-error").innerHTML = mostrarMensajeDeError(tipoDeInput, input);
+      }
+  };
 }
 
 const tipoDeErrores = [

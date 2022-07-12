@@ -34,13 +34,14 @@ app.use((req, res, next) => {
 app.post("/registro", (request, response) => {
   bcrypt.hash(request.body.password, 10)
     .then((hashedPassword) => {
+      // crea el usuario usando el constructor de usuario del UserModel
       const user = new Usuario ({
         nombre: request.body.nombre,
         email: request.body.email,
         password: hashedPassword,
       });
       user
-        .save()
+        .save() //funcion de moongose que graba el usuario como documento en la db
         .then((result) => {
           response.status(201).send({
             message: "Usuario creado",
@@ -49,12 +50,15 @@ app.post("/registro", (request, response) => {
         })
         .catch((error) => {
           response.status(500).send({
-            message: "El usuario no ha podido ser creado",
+            //Especifica si por algun error el usuario no ha podido ser creado. Dada las validaciones hechas
+            //en el singUp form la unica posibilidad es que no se haya creado porque el email ya esta registrado  
+            message: "El usuario no ha podido ser creado. Email ya registrado",
             error,
           });
         });
     })
     .catch((e) => {
+      // toma el error de que la contraseña no haya podido ser hasheada
       response.status(500).send({
         message: "La contraseña no fue hasheada correctamente",
         e,
